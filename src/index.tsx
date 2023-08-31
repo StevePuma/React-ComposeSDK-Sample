@@ -3,13 +3,21 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { SisenseContextProvider } from '@sisense/sdk-ui';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <SisenseContextProvider
+      url=""
+      token=""
+      // username/password or SSO or WAT or API token
+      defaultDataSource={'Sample ECommerce'}
+    >
+      <App />
+    </SisenseContextProvider>
   </React.StrictMode>
 );
 
