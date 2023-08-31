@@ -1,8 +1,6 @@
-# Getting Started with Create React App
+# Getting Started with React-ComposeSDK-Sample
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
 
 In the project directory, you can run:
 
@@ -14,18 +12,24 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `npm test`
+### `npm config set "@sisense:registry" "https://npm.pkg.github.com" --userconfig .npmrc`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Generate Github Personal Access Tokem 
 
-### `npm run build`
+# Paste Access Token Below 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### `npm config set "//npm.pkg.github.com/:_authToken" "__YOUR_TOKEN__" --userconfig .npmrc`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### `npm i @sisense/sdk-ui @sisense/sdk-data`
+
+### `npm i @sisense/sdk-cli`
+
+### `npx sdk-cli get-data-model --username "<USERNAME>" --output src/sample-ecommerce.ts --dataSource "Sample ECommerce" --url <SISENSEURL>`
+
+# Update Sisense Context Provider information in the index.tsx file with your environment URL and API token. 
+
+### `npm start` 
+
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
